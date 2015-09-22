@@ -11,7 +11,16 @@ app.get('/myFirstRoute', function(request, response) {
 	response.send('<body><h1>hello everyone!</h1></body>');
 });
 
-app.get('/mySecondRoute', function(reuqest, response) {
+app.get('/routeWithParameters', function(request, response) {
+	var requestParameters = request.query;
+	if(requestParameters.name !== undefined) {
+		response.send('<body><h1>hello, ' + requestParameters.name + '!</h1></body>');
+	} else {
+		response.send('<body><h1>hello, stranger!</h1></body>');
+	}
+});
+
+app.get('/routeUsingJade', function(request, response) {
 	response.render('exampleJadeView');
 });
 
