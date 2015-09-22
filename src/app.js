@@ -1,12 +1,21 @@
 var express = require('express');
-var exampleRoute = require('./routes/example');
+var path = require('path');
 
 var app = express();
 
 app.set('port', 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 
-app.use('/myFirstRoute', exampleRoute);
+app.get('/myFirstRoute', function(request, response) {
+	response.send('<body><h1>hello everyone!</h1></body>');
+});
+
+app.get('/mySecondRoute', function(reuqest, response) {
+	response.render('exampleJadeView');
+});
+
 
 app.listen(app.get('port'), function() {
-	console.log("Node app is running at localhost:" + app.get('port'))
+	console.log("node.js app running at localhost:" + app.get('port'))
 });
