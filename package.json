@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "~4.13.1",
-    "jade": "~1.11.0"
+    "jade": "~1.11.0",
+    "body-parser": "~1.13.2"
   }
 }
