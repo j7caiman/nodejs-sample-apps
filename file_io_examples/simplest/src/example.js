@@ -6,6 +6,5 @@ fs.readFile('../sample.txt', function (err, data) {
 	}
 
 	var text = data.toString();
-
 	console.log(text);
 });
