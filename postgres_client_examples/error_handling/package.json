@@ -1,0 +1,8 @@
+{
+  "name": "postgres_error_handling_example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "pg": "^4.4.3"
+  }
+}
