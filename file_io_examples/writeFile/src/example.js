@@ -9,7 +9,7 @@ var fileContents = "When they kick at your front door" +
 	"\nShot down on the pavement" +
 	"\nOr waiting on death row";
 
-fs.writeFile("sample.txt", fileContents, function(err) {
+fs.writeFile("./sample.txt", fileContents, function(err) {
 	if(err) {
 		throw err;
 	}

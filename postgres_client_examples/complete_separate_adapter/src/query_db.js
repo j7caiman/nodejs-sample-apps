@@ -1,5 +1,5 @@
 var pg = require('pg');
-var connectionString = "postgres://jon:1234@localhost/class_example";
+var connectionString = "postgres://jon@localhost/class_example";
 
 module.exports = function (queryString, queryParameters, onComplete) {
 	if (typeof queryParameters == 'function') { // normalize parameters
