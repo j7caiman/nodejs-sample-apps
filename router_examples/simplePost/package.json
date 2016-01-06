@@ -1,0 +1,9 @@
+{
+  "name": "post_example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "~4.13.1"
+  }
+}

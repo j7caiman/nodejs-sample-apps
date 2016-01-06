@@ -1,0 +1,2 @@
+try:
+curl -H "Content-Type: application/json" -d '{ "yay":"data", "elephant":"majestic" }' http://localhost:3000/samplePostRequest2

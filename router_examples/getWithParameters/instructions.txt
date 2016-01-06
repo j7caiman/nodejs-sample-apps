@@ -1,0 +1,6 @@
+in the browser, try hitting:
+localhost:3000/routeWithParameters
+localhost:3000/routeWithParameters?name=maxwell
+
+also try:
+curl localhost:3000/routeWithParameters?name=frank

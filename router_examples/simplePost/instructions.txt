@@ -1,0 +1,5 @@
+try opening test.html in the browser
+
+and try:
+curl -X POST localhost:3000/routeWithParameters
+curl -d "elephants=majestic&monkeys=rude" http://localhost:3000/samplePostRequest
