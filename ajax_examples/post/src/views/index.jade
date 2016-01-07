@@ -1,0 +1,20 @@
+html
+	head
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+	body
+		p#result
+		form
+			input#filename(type="text" placeholder="file name")
+			input#fileContents(type="textarea" placeholder="file contents")
+			input#goButton(type="button" value="create file")
+		script.
+			$("#goButton").click(function() {
+				var fileData = {
+					name: $("#filename").val(),
+					contents: $("#fileContents").val()
+				};
+
+				$.post("/createNewTicket", fileData, function(response, textStatus) {
+					$(document.body).append("<p>" + textStatus + ": " + response + "</p>");
+				});
+			});

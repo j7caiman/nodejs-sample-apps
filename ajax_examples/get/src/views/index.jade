@@ -1,0 +1,18 @@
+html
+	head
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+	body
+		p#book(style="font-style: italic; width: 500px") In the beginning, words had no meaning. Many crashed together, lost and confused. The discord which followed was amusing to witness.
+
+		script.
+			function addWordsToPage() {
+				$.get("/getSomeWords", function (response) {
+					var wordString = response.words.join(" ");
+					var currentText = $('#book').text();
+					$('#book').text(currentText + " " + wordString);
+				});
+			}
+
+			setTimeout(function () {
+				setInterval(addWordsToPage, 1000);
+			}, 5000);
