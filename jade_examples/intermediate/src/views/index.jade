@@ -1,0 +1,12 @@
+html
+	head
+	body
+		h2 hi!
+		p Apparently, there are #{countries.length} countries in the world.
+		each country in countries
+			- var countryInfo = country.name + " has population " + country.population + ".";
+			if(country.name == 'Netherlands')
+				p woo Holland!
+				li(id=country.name style="font-weight: bold;")= countryInfo
+			else
+				li(id=country.name)= countryInfo
