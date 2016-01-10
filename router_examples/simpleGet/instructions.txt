@@ -1,0 +1,5 @@
+in the browser, try hitting:
+localhost:3000
+
+also try:
+curl localhost:3000

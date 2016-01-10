@@ -1,0 +1,7 @@
+html
+	head
+	body
+		a(href='/') home
+		each user in users
+			li name: #{user.name}, email: #{user.email},
+				a(href='/users/#{user.id}') link
