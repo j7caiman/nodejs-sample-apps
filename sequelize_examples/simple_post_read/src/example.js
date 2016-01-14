@@ -9,9 +9,7 @@ var Post = sequelize.define('post', {
 	body: Sequelize.TEXT
 });
 
-sequelize.sync().then(function () {
-	return Post.findAll();
-}).then(function (posts) {
+Post.findAll().then(function (posts) {
 	var data = posts.map(function (post) {
 		return {
 			title: post.dataValues.title,
