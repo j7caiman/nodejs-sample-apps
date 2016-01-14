@@ -1,0 +1,58 @@
+html
+	head
+	body
+		h3 Create Person:
+		form(action='/persons' method='post')
+			label name:
+			input(name='name')
+			input(type='submit' value='create person')
+		h3 Create Language:
+		form(action='/languages' method='post')
+			label name:
+			input(name='name')
+			input(type='submit' value='create language')
+		h3 Create Fluency:
+		form(action='/fluencys' method='post')
+			label language id:
+			input(name='languageId')
+			label person id:
+			input(name='personId')
+			label fluency level:
+			input(name='level')
+			input(type='submit' value='create fluency')
+
+		h3 Persons
+		table(border=1)
+			tr
+				td Id
+				td Name
+			each person in persons
+				tr
+					td= person.id
+					td= person.name
+
+		h3 Languages
+		table(border=1)
+			tr
+				td Id
+				td Name
+			each language in languages
+				tr
+					td= language.id
+					td= language.name
+
+		h3 Fluencys
+		table(border=1)
+			tr
+				td Language Id
+				td Language Name
+				td Person Id
+				td Person Name
+				td Fluency Level
+			each fluency in fluencys
+				tr
+					td= fluency.languageId
+					td= fluency.languageName
+					td= fluency.personId
+					td= fluency.personName
+					td= fluency.level
