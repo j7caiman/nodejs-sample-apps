@@ -1,0 +1,7 @@
+{
+  "name": "delete-file-by-extension-with-modules",
+  "description": "Modules don't necessarily make things clearer - but if you're going to be using the same code in multiple places, splitting things up into modules might be a good option.",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true
+}
