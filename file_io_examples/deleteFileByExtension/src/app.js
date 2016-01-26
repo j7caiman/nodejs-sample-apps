@@ -1,7 +1,7 @@
 var deleteListOfFiles = require('./deleteListOfFiles');
 var getFilesByExtension = require('./getFilesByExtension');
 
-if(process.argv[2] === undefined) {
+if(process.argv[2] === undefined || process.argv[3] === undefined) {
   console.log("usage: node src/app.js <path> <extension>");
   return;
 }

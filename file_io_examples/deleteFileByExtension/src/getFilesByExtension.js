@@ -14,6 +14,11 @@ function getFilesByExtension(path, extension, callback) {
       }
     });
 
+    if(filePaths.length === 0 ) {
+      console.log("no files in directory: " + path + " match extension: " + extension);
+      return;
+    }
+
     callback(filePaths);
   });
 }
