@@ -1,5 +1,5 @@
 {
-  "name": "postgres_write_using_input_parameters_example",
+  "name": "postgres-write-using-input-parameters-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

@@ -1,5 +1,5 @@
 {
-  "name": "promise_read_file_example",
+  "name": "promise-read-file-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

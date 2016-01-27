@@ -1,5 +1,5 @@
 {
-  "name": "create_if_not_exist_example",
+  "name": "create-if-not-exist-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

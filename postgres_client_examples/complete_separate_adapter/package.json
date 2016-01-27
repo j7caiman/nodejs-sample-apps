@@ -1,5 +1,5 @@
 {
-  "name": "postgres_separate_adapter_example",
+  "name": "postgres-separate-adapter-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

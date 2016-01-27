@@ -1,5 +1,5 @@
 {
-  "name": "postgres_read_example",
+  "name": "postgres-read-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

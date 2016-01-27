@@ -1,5 +1,5 @@
 {
-  "name": "postgres_error_handling_example",
+  "name": "postgres-error-handling-example",
   "version": "0.0.0",
   "private": true,
   "dependencies": {
