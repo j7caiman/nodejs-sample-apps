@@ -1,0 +1,4 @@
+- Create a Node.js application that has one route that reads in the colors.json file.
+- It should then send this data to a Jade template.
+- The template should list each of the colors, and the color listed should be in the color of the hexValue value.
+  - hint: use `<style: color=red>`, except splice in the hex value from the server.  
