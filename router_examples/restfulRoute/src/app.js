@@ -12,7 +12,8 @@ var sequelize = new Sequelize('class_example', 'jon', null, {
 
 var User = sequelize.define('user', {
 	name: Sequelize.STRING,
-	email: Sequelize.STRING
+	email: Sequelize.STRING,
+	password: Sequelize.STRING
 });
 
 var app = express();
@@ -63,7 +64,8 @@ app.get('/users/:id', function (request, response) {
 app.post('/users', bodyParser.urlencoded({extended: true}), function (request, response) {
 	User.create({
 		name: request.body.name,
-		email: request.body.email
+		email: request.body.email,
+		password: request.body.password
 	}).then(function (user) {
 		response.redirect('/users/' + user.id);
 	});
