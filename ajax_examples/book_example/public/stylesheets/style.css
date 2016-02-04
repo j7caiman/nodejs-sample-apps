@@ -1,0 +1,11 @@
+.thumbnail {
+  display: inline-block;
+}
+
+#thumbnail_wrapper {
+  overflow: scroll;
+}
+
+#thumbnail_inner_wrapper {
+  width: 1554px;
+}
