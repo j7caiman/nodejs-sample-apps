@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+	body
+		if user
+			a(href='/profile') view profile
+			br
+			a(href='/logout') log out
+		else
+			form(action='/login' method='post')
+				label email
+				input(name='email')
+				label password
+				input(name='password')
+				input(type='submit' value='login')
+
+		h2= message
