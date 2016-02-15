@@ -48,9 +48,11 @@ app.get('/profile', function (request, response) {
 
 app.post('/login', bodyParser.urlencoded({extended: true}), function (request, response) {
 	User.findOne({
-		email: request.body.email
+		where: {
+			email: request.body.email
+		}
 	}).then(function (user) {
-		if (request.body.password === user.password) {
+		if (user !== null && request.body.password === user.password) {
 			request.session.user = user;
 			response.redirect('/profile');
 		} else {
