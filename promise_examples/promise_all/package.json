@@ -1,0 +1,8 @@
+{
+  "name": "promise-all-example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "promise": "^7.1.1"
+  }
+}
