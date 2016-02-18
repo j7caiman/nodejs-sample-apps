@@ -21,9 +21,9 @@ Message.belongsTo(Person);
 
 
 sequelize.sync().then(function () {
-	Person.create({
+	Person.create({ // INSERT INTO "people" ("id","name") VALUES (DEFAULT,'bubbles') RETURNING *;
 		name: "bubbles"
-	}).then(function(person) {
+	}).then(function(person) { // INSERT INTO "messages" ("id","body","personId") VALUES (DEFAULT,'i like trains',1) RETURNING *;
 		person.createMessage({
 			body: "i like trains"
 		});
