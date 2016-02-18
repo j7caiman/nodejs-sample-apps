@@ -20,14 +20,12 @@ Person.hasMany(Message);
 Message.belongsTo(Person);
 
 
-sequelize.sync({force: true}).then(function () {
+sequelize.sync().then(function () {
 	Person.create({
 		name: "bubbles"
 	}).then(function(person) {
-		Message.create({
+		person.createMessage({
 			body: "i like trains"
-		}).then(function(message) {
-			message.setPerson(person);
-		})
+		});
 	});
 });
