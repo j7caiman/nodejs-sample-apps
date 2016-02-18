@@ -1,0 +1,9 @@
+{
+  "name": "one-to-many-example",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "pg": "^4.4.3",
+    "sequelize": "^3.15.1"
+  }
+}
