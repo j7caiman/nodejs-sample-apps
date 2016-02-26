@@ -1,6 +1,4 @@
-in the browser, try hitting:
-localhost:3000/routeWithParameters
-localhost:3000/routeWithParameters?name=maxwell
+try running the server and hitting the following urls:
 
-also try:
-curl localhost:3000/routeWithParameters?name=frank
+http://localhost:3000/pickle/1/2
+http://localhost:3000/pickle/boop/beep
