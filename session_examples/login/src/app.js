@@ -47,6 +47,16 @@ app.get('/profile', function (request, response) {
 });
 
 app.post('/login', bodyParser.urlencoded({extended: true}), function (request, response) {
+	if(request.body.email.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your email address."));
+		return;
+	}
+
+	if(request.body.password.length === 0) {
+		response.redirect('/?message=' + encodeURIComponent("Please fill out your password."));
+		return;
+	}
+
 	User.findOne({
 		where: {
 			email: request.body.email
@@ -77,11 +87,12 @@ sequelize.sync({force: true}).then(function () {
 		name: "stabbins",
 		email: "yes@no",
 		password: "not_password"
+	}).then(function () {
+		var server = app.listen(3000, function () {
+			console.log('Example app listening on port: ' + server.address().port);
+		});
 	});
-}, function () {
-	console.log('sync failed');
-}).then(function () {
-	var server = app.listen(3000, function () {
-		console.log('Example app listening on port: ' + server.address().port);
-	});
+}, function (error) {
+	console.log('sync failed: ');
+	console.log(error);
 });
