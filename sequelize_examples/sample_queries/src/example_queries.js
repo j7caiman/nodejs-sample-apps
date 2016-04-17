@@ -38,7 +38,8 @@ Message.findAll({
 
 //Person.findOne({
 //	where: {
-//		firstName: "Sylvester"
+//		firstName: "Sylvester",
+//		lastName: "Stallone"
 //	}
 //}).then(function(result) {
 //	console.log("\n\nresult of: findOne person");
@@ -48,7 +49,8 @@ Message.findAll({
 //Person.findOne({
 //	include: [Message],
 //	where: {
-//		firstName: "Sylvester"
+//		firstName: "Sylvester",
+//		lastName: "Stallone"
 //	}
 //}).then(function(result) {
 //	console.log("\n\nresult of: findOne person and include his messages");

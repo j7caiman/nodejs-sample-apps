@@ -9,6 +9,7 @@ var Post = sequelize.define('post', {
 	body: Sequelize.TEXT
 });
 
+// more examples here: http://docs.sequelizejs.com/en/latest/docs/models-usage/
 Post.findAll().then(function (posts) {
 	var data = posts.map(function (post) {
 		return {
