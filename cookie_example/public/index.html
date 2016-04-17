@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="js.cookie.js"></script>
+  <script type="text/javascript">
+    if(Cookies.get('something') !== undefined) {
+      alert("welcome back!!");
+    } else {
+      alert("welcome!")
+    }
+
+    // console.log("hi");
+    Cookies.set('something', { stuff: 'more stuff' });
+    // console.log(Cookies.get('something'));
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>
